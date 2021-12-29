@@ -1,0 +1,145 @@
+// FONT VARIABLES
+$font-primary: 'Merriweather', serif;
+
+
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em;   // 1200px
+$bp-large: 62.5em;   // 1000px
+$bp-medium: 50em;    // 800px;
+$bp-small: 37.5em;    // 600px;
+
+* {
+  box-sizing: border-box;
+}
+html {
+ 
+  //--font-size: 62.5%; 
+
+  // @media only screen and (max-width: $bp-large) {
+  //   font-size: 50%;
+  // }
+
+  // @media only screen and (max-width: $bp-medium) {
+  //   font-size: 40%;
+  // }
+
+  // @media only screen and (max-width: $bp-small) {
+  //   font-size: 35%;
+  // }
+   
+}
+
+body {
+  font-family: $font-primary;
+
+//Remove everything below for clean template.
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: #e74c3c;
+
+  
+}
+
+
+
+.quote-box {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 75rem;
+  min-width: 75vw;
+  max-height: 25rem;
+
+  @media only screen and (max-width: $bp-large) {
+    padding: 0.5rem 1rem;
+    margin: 0 40px;
+    
+  }
+  
+
+  &__title {
+    font-size: 45px;
+    font-weight: 700;
+
+    @media only screen and (max-width: $bp-large) {
+      font-size: 40px;
+      
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 25px;
+    }
+  }
+
+  &__contents {
+    border-bottom: 1px solid rgb(207, 207, 207);
+    margin-bottom: 1rem;
+    padding-bottom: 2rem;
+    max-width: 75%;
+    text-align: center;
+
+    @media only screen and (max-width: $bp-small) {
+      margin-bottom: 0;
+      padding-bottom: 2rem;
+      max-width: 85%;
+    }
+
+    }
+
+  &__quote {
+    font-size: 25px;
+    
+
+    @media only screen and (max-width: $bp-large) {
+      font-size: 20px;
+      
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 15px;
+    }
+   
+  }
+
+  &__author {
+    font-size: 15px;
+    font-style: italic;
+  }
+
+  &__button {
+    margin-top: 1rem;
+    cursor: pointer;
+    color: #FFF;
+    background-color: #e74c3c;
+    padding: 0.7rem;
+    border-radius: 10px;
+    border: 0;
+    transition: ease 0.2s;
+    margin-bottom: 2rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 20px;
+      
+    }
+
+    &:hover {
+      scale: 1.1;
+    }
+
+    &:active {
+      scale: 1;
+    }
+  }
+}
+
+
+
